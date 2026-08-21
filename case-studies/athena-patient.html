@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AthenaPatient — Veronique Gunawan</title>
+<meta name="description" content="A 4.9-star app hiding real failures — feature parity audit and redesign of the AthenaPatient mobile app.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap-wide">
+    <a href="../index.html" class="nav-name">Veronique Gunawan</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Case Studies</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="https://drive.google.com/file/d/1UTaKH7hEgYopthcgg3RFJcfNHOlt4HZT/view?usp=sharing" target="_blank" rel="noopener">Resume</a></li>
+      <li><a href="mailto:veronique.gunawan@gmail.com">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="wrap" style="padding-top:40px;">
+  <a class="back-link" href="index.html">← All work</a>
+  <p style="font-size:0.82rem; color:var(--ink-soft); margin-top:16px;">Independent educational redesign — not affiliated with or endorsed by athenahealth.</p>
+  <div style="margin-top:8px;">
+    <span class="tag">UX Research</span><span class="tag">Product Design</span><span class="tag">Concept + PRD</span><span class="tag">Solo Project</span>
+  </div>
+  <h1 style="margin-top:14px;">AthenaPatient: a 4.9-star app hiding real failures</h1>
+  <p class="lede">I tried to update my address in the AthenaPatient mobile app. It sent me to the mobile website. The mobile website also didn't have it. I had to switch to desktop. That moment became a full feature parity audit — and a redesign.</p>
+
+  <div class="meta-grid">
+    <div><div class="label">My Role</div><div class="value">Solo designer — research, strategy, hi-fi design</div></div>
+    <div><div class="label">Timeline</div><div class="value">4 weeks, self-initiated</div></div>
+    <div><div class="label">Methods</div><div class="value">App Store analysis, usability testing, competitive audit</div></div>
+    <div><div class="label">Tools</div><div class="value">Figma, Figma Make, App Store data</div></div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-block"><div class="num">4.9★</div><div class="label">aggregate rating — masking a pattern of broken core features</div></div>
+    <div class="stat-block"><div class="num">112k</div><div class="label">ratings total; 1-star reviews cite the same issues repeatedly</div></div>
+    <div class="stat-block"><div class="num">6</div><div class="label">critical missing features — all redirecting users off-app</div></div>
+  </div>
+</header>
+
+<section class="wrap">
+  <span class="section-label">Process</span>
+  <div class="process-steps">
+    <div class="process-step"><span class="num">01</span><h4>Discover</h4><p>Personal experience, App Store audit, competitor comparison</p></div>
+    <div class="process-step"><span class="num">02</span><h4>Define</h4><p>Feature parity gap, user flows, prioritization framework</p></div>
+    <div class="process-step"><span class="num">03</span><h4>Design</h4><p>Hi-fi screens, existing visual language, edge cases</p></div>
+    <div class="process-step"><span class="num">04</span><h4>Test</h4><p>5-user prototype testing, IA validation, refinement</p></div>
+  </div>
+</section>
+
+<!-- DISCOVER -->
+<section class="wrap">
+  <span class="section-label">01 · Discover — The Problem</span>
+  <h2>I found the bug the rating was hiding</h2>
+  <p>Trying to update my mailing address in the AthenaPatient app, I hit a redirect to the mobile website. The mobile website also didn't support it. I had to open a laptop to change my address — a task that should take 30 seconds in a healthcare app.</p>
+  <p>That sent me to the App Store to look at 1-star reviews. What I found wasn't random frustration — it was a pattern. The same features kept coming up. The same word kept appearing: "useless." Meanwhile, the aggregate rating sat at 4.9 stars.</p>
+
+  <blockquote>A high aggregate rating can actively obscure a broken product. When the majority of users only need appointments (which works), they 5-star it. When a user needs billing or profile management, they hit a wall — and become a 1-star. The average hides both groups.<cite>The core insight</cite></blockquote>
+
+  <h3 style="margin-top:32px;">Three lenses on the same problem</h3>
+  <div class="finding-list">
+    <div class="finding"><span class="arrow">→</span><div><strong>Personal usability testing.</strong> Audited every core patient portal task firsthand — appointments, billing, messaging, lab results, profile management — documenting exactly where each one broke or redirected.</div></div>
+    <div class="finding"><span class="arrow">→</span><div><strong>App Store review analysis.</strong> Analyzed 1-star critical reviews to identify complaint patterns at scale. Recent reviews (Jan 2025) consistently described the same redirect failures — confirming the problem wasn't old or resolved.</div></div>
+    <div class="finding"><span class="arrow">→</span><div><strong>Competitor benchmarking.</strong> Compared feature parity against MyChart, the market leader. Every feature AthenaPatient was missing, MyChart had — framing this as a competitive risk, not just a UX inconvenience.</div></div>
+    <div class="finding"><span class="arrow">→</span><div><strong>User flow mapping.</strong> Mapped the actual journey users were taking — app → mobile web → desktop — to make the fragmentation visible as a multi-platform context switch, not just a missing button.</div></div>
+  </div>
+</section>
+
+<!-- DEFINE -->
+<section class="wrap">
+  <span class="section-label">02 · Define — Key Findings</span>
+  <h2>What 1-star reviews actually said</h2>
+  <p>The most recent critical reviews weren't scattered complaints — they clustered tightly around five issues. Each one represents a core healthcare task that should be completable in a patient app.</p>
+
+  <div class="finding-list">
+    <div class="finding"><span class="arrow">→</span><div>Doctor's visit notes unavailable in-app — redirects to website</div></div>
+    <div class="finding"><span class="arrow">→</span><div>Billing and payment impossible — redirects to website instead of processing in-app</div></div>
+    <div class="finding"><span class="arrow">→</span><div>Messaging failures — messages restart mid-send or don't go through at all</div></div>
+    <div class="finding"><span class="arrow">→</span><div>Lab results and referrals missing — redirected to web for basic clinical info</div></div>
+    <div class="finding"><span class="arrow">→</span><div>Profile management absent — can't update address, contact info, or account settings in-app</div></div>
+  </div>
+
+  <blockquote>"Everything redirects to the website. What's the point of the app?"<cite>1-star App Store review, Jan 2025</cite></blockquote>
+
+  <h3 style="margin-top:32px;">Feature parity: AthenaPatient vs. MyChart</h3>
+  <table>
+    <thead><tr><th>Feature</th><th>AthenaPatient</th><th>MyChart</th><th>User impact</th></tr></thead>
+    <tbody>
+      <tr><td>Upcoming appointments</td><td>✓ Works</td><td>✓ Works</td><td>Low friction</td></tr>
+      <tr><td>In-app messaging</td><td>Partial — fails</td><td>✓ Works</td><td>Critical comms broken</td></tr>
+      <tr><td>Lab results</td><td>Partial — limited</td><td>✓ Full</td><td>Redirects required</td></tr>
+      <tr><td>Billing &amp; payment</td><td>✗ Redirects</td><td>✓ Works</td><td>Can't pay in-app</td></tr>
+      <tr><td>Visit notes</td><td>✗ Redirects</td><td>✓ Works</td><td>Must use desktop</td></tr>
+      <tr><td>Profile management</td><td>✗ Missing</td><td>✓ Works</td><td>Desktop required</td></tr>
+      <tr><td>Referral viewing</td><td>✗ Redirects</td><td>✓ Works</td><td>Desktop required</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:32px;">This is a business risk disguised as a UX problem</h3>
+  <p>AthenaPatient's user base is largely captive — patients use the app because their doctor's practice requires it. That creates a false sense of security in the ratings: users who can't switch apps can only complain, not leave. But that dynamic can shift.</p>
+  <div class="finding-list">
+    <div class="finding"><span class="arrow">🏥</span><div><strong>Trust erosion.</strong> Healthcare requires trust above almost any other product category. A broken billing feature or redirected lab result signals the company doesn't take the patient's experience seriously.</div></div>
+    <div class="finding"><span class="arrow">⚠️</span><div><strong>Retention risk.</strong> Frustrated patients may pressure their doctors to switch to practices using competitors with better portals — MyChart was specifically named in reviews.</div></div>
+    <div class="finding"><span class="arrow">📉</span><div><strong>Adoption barrier.</strong> New users, often onboarded because a new doctor requires Athena, hit friction immediately. A redirect on day one sets a damaging precedent.</div></div>
+    <div class="finding"><span class="arrow">📊</span><div><strong>Misleading metrics.</strong> The 4.9-star aggregate actively masks the severity of these failures from stakeholders. If product decisions are made from that number, the underlying pain isn't heard.</div></div>
+  </div>
+</section>
+
+<!-- DESIGN -->
+<section class="wrap">
+  <span class="section-label">03 · Design — Prioritization &amp; Scope</span>
+  <h2>Six missing features. Four weeks. Here's how I chose.</h2>
+  <p>I evaluated each missing feature across two dimensions: frequency of need and impact of failure. The highest-impact, highest-frequency failures became the scope.</p>
+
+  <table>
+    <thead><tr><th>Feature</th><th>Status</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Billing Section</td><td>✓ Redesigned — Phase 1</td><td>"Cannot pay in-app" was the single most repeated complaint. Financial info in healthcare is never optional.</td></tr>
+      <tr><td>Profile Section</td><td>✓ Redesigned — Phase 1</td><td>My own experience started here. Not being able to update your address is a fundamental failure.</td></tr>
+      <tr><td>Visit Notes Viewer</td><td>→ Deferred — Phase 2</td><td>Requires complex medical data display and HIPAA-compliant formatting — higher complexity than 4-week scope allows.</td></tr>
+      <tr><td>Full Messaging Overhaul</td><td>→ Deferred — Phase 2</td><td>Failures appear partly technical (messages restarting mid-send). Needs engineering investigation before UI redesign.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:32px;">What I built</h3>
+
+  <p><strong>Billing Section</strong> — a unified billing hub that keeps users entirely in-app for everything money-related, no redirects: balance overview, in-app payment processing, insurance details, payment history, and Explanation of Benefits with progressive disclosure.</p>
+  <div class="img-placeholder">Billing section screens<br>assets/images/athena-patient/billing-1.png, billing-2.png</div>
+
+  <p><strong>Profile Section</strong> — separated medical info from billing info from contact info, each editable independently, without a desktop browser: patient info, billing info, contact details, security settings, and family access management.</p>
+  <div class="img-placeholder">Profile section screens<br>assets/images/athena-patient/profile-1.png, profile-2.png, profile-3.png</div>
+  <div class="img-placeholder">Prototype walkthrough video<br>assets/images/athena-patient/walkthrough.mp4</div>
+
+  <h3 style="margin-top:32px;">Four key design decisions</h3>
+  <div class="finding-list">
+    <div class="finding"><span class="arrow">1</span><div><strong>Consolidated billing into one hub.</strong> Reduces cognitive load and matches user mental models — "where do I see everything about money?" has one answer.</div></div>
+    <div class="finding"><span class="arrow">2</span><div><strong>Separated patient info from billing info in Profile.</strong> Users update medical info and payment methods for different reasons at different times — separating them prevents accidental edits.</div></div>
+    <div class="finding"><span class="arrow">3</span><div><strong>Progressive disclosure for complex data.</strong> Summary cards expand to detail views for dense features like Explanation of Benefits — shows the key number first, prevents cognitive overload.</div></div>
+    <div class="finding"><span class="arrow">4</span><div><strong>Preserved Athena's existing visual language.</strong> Maintained the existing design system throughout so new features feel native, not bolted on.</div></div>
+  </div>
+</section>
+
+<!-- MEASURE -->
+<section class="wrap">
+  <span class="section-label">04 · Measure — Impact</span>
+  <h2>Before and after: the billing task</h2>
+  <p>The most broken flow — paying a bill — went from a multi-platform ordeal to a single in-app task.</p>
+
+  <table>
+    <thead><tr><th>Before</th><th>After</th></tr></thead>
+    <tbody>
+      <tr><td>Open app → navigate to Billing → hit redirect notice</td><td>Open app → navigate to Billing</td></tr>
+      <tr><td>Tap link to mobile website → also incomplete</td><td>Review balance and select invoice</td></tr>
+      <tr><td>Switch to desktop, log in again</td><td>Complete payment in-app</td></tr>
+      <tr><td>Complete payment on desktop</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <div class="stat-row">
+    <div class="stat-block"><div class="num">100%</div><div class="label">of billing and profile redirects eliminated for redesigned features (target)</div></div>
+    <div class="stat-block"><div class="num">Top 2</div><div class="label">complaint categories from 1-star reviews directly addressed</div></div>
+    <div class="stat-block"><div class="num">7→3</div><div class="label">steps to complete a billing payment — eliminates 3 platform switches</div></div>
+    <div class="stat-block"><div class="num">MyChart</div><div class="label">feature parity achieved for billing and profile — the benchmark users cited</div></div>
+  </div>
+
+  <blockquote>Building native mobile billing and profile management isn't innovative — it's table stakes. Sometimes the most important product work is simply making sure core functionality works the way users expect it to.<cite>PM lens</cite></blockquote>
+</section>
+
+<section class="wrap">
+  <span class="section-label">Reflection</span>
+  <h2>What I learned from a self-initiated project</h2>
+
+  <div class="finding-list">
+    <div class="finding"><span class="arrow">✓</span><div><strong>What worked — starting from my own experience made the problem real.</strong> The redirect I hit personally gave me an authentic stake in the problem. That motivation is hard to manufacture.</div></div>
+    <div class="finding"><span class="arrow">✓</span><div><strong>What worked — App Store reviews as qualitative data at scale.</strong> Critical reviews gave rich, unprompted feedback without recruiting. The pattern across dozens of 1-star reviews was more convincing than any survey I could have designed.</div></div>
+    <div class="finding"><span class="arrow">↻</span><div><strong>Would do differently — more structured interviews beyond friends and family.</strong> My usability testing was limited to five users in my network. Recruiting actual Athena patients, especially older adults, would have caught edge cases I likely missed.</div></div>
+    <div class="finding"><span class="arrow">↻</span><div><strong>Would do differently — quantitative data on which redirects users hit most.</strong> I prioritized by qualitative signals, not usage data. Real analytics would sharpen prioritization significantly.</div></div>
+  </div>
+
+  <h3 style="margin-top:32px;">Next steps</h3>
+  <div class="finding-list">
+    <div class="finding"><span class="arrow">1</span><div>Validate priorities with real Athena patients through structured interviews — especially older adults and low digital-literacy users</div></div>
+    <div class="finding"><span class="arrow">2</span><div>Design the visit notes viewer — the most requested missing feature in critical reviews, deferred due to scope</div></div>
+    <div class="finding"><span class="arrow">3</span><div>Investigate messaging failures — determine whether they're frontend or backend before redesigning the UI</div></div>
+    <div class="finding"><span class="arrow">4</span><div>Test with diverse users — non-English speakers, elderly patients, users with low digital literacy</div></div>
+    <div class="finding"><span class="arrow">5</span><div>Create a phased rollout plan with clear success metrics for each phase</div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="cta-band">
+    <h2>Next case study</h2>
+    <p>Explore the full case study index.</p>
+    <a href="fandubs.html" class="btn btn-primary">Fandubs: safe spaces for isolated students →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="press-line">I pressed the button. Obviously.</div>
+    <div class="footer-links">
+      <a href="https://github.com/Veroniki5208" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/veronique-gunawan/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:veronique.gunawan@gmail.com">Contact</a>
+    </div>
+    <div class="updated">Last updated August 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>

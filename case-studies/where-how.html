@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where-How — Veronique Gunawan</title>
+<meta name="description" content="A browser extension that reads your screen and points to exactly what you need — built prototype-first, PRD written after.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap-wide">
+    <a href="../index.html" class="nav-name">Veronique Gunawan</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Case Studies</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="https://drive.google.com/file/d/1UTaKH7hEgYopthcgg3RFJcfNHOlt4HZT/view?usp=sharing" target="_blank" rel="noopener">Resume</a></li>
+      <li><a href="mailto:veronique.gunawan@gmail.com">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="wrap" style="padding-top:40px;">
+  <a class="back-link" href="index.html">← All work</a>
+  <div style="margin-top:20px;">
+    <span class="tag tag-pm">Product Thinking</span><span class="tag">Accessibility</span><span class="tag">Browser Extension</span><span class="tag">Solo</span>
+  </div>
+  <h1 style="margin-top:14px;">Where-How: show me where to click</h1>
+  <p class="lede">A browser extension that reads your screen and places a visual pointer directly on the element you need — designed for elderly users and anyone dropped into an unfamiliar interface without a map.</p>
+
+  <div class="meta-grid">
+    <div><div class="label">My Role</div><div class="value">Product designer &amp; builder — sketches, PRD, and the extension itself</div></div>
+    <div><div class="label">Status</div><div class="value">Working prototype — core loop live on real sites, single-step queries only</div></div>
+    <div><div class="label">Platform</div><div class="value">Browser extension (Chrome / Edge, MV3)</div></div>
+    <div><div class="label">Primary users</div><div class="value">Adults 60+, and anyone on an unfamiliar interface</div></div>
+  </div>
+
+  <blockquote>I want to be upfront about the order things actually happened in. I sketched the core interaction and mapped the user need first, then built the working prototype — before writing the PRD, not after. I directed Claude, and later Gemini's API for cost-free iteration, through the extension architecture: scaffolding the manifest and service worker, debugging the content script, and wiring the DOM-reading and LLM element-matching loop until it worked end-to-end on real sites. The PRD was written once the prototype was functional, using what I'd actually learned building it.<cite>A note on this project</cite></blockquote>
+
+  <div class="stat-row">
+    <div class="stat-block"><div class="num">2</div><div class="label">distinct user groups with the same underlying need</div></div>
+    <div class="stat-block"><div class="num">10</div><div class="label">feature requirements defined across P0/P1 scope</div></div>
+    <div class="stat-block"><div class="num">5</div><div class="label">open questions identified before any build decision</div></div>
+  </div>
+</header>
+
+<section class="wrap">
+  <span class="section-label">The Problem</span>
+  <h2>Support content exists. The gap is that it lives somewhere else.</h2>
+  <p>Organizations pour resources into help centers, FAQs, and tutorial videos. But task abandonment stays high among non-technical users. The issue isn't the existence of support — it's that support lives outside the interface. Users have to read an instruction, then hunt for what it's describing on their specific screen, right now.</p>
+  <p>A redesign makes it worse. A user who knew exactly where to find their lab results last month is completely lost after a portal update. Existing documentation lags by weeks. For users who rely on family members or support phone lines to navigate these systems, every interface change is a real cost.</p>
+
+  <blockquote>"How do I cancel my subscription?" and "Where is the add textbox button in Google Docs?" are the same question. Someone knows what they want to do but can't locate it. Most support gives them more text. Where-How gives them a pointer on the actual screen.<cite>The insight</cite></blockquote>
+</section>
+
+<section class="wrap">
+  <span class="section-label">User Research</span>
+  <h2>Two users, one problem, different stakes</h2>
+  <p>Primary research (interviews and observation) is planned as the next step. What follows is grounded in secondary research and the formative insights that shaped the PRD.</p>
+
+  <h3 style="margin-top:28px;">Primary persona: Margaret, 71</h3>
+  <table>
+    <tbody>
+      <tr><td><b>Background</b></td><td>Retired teacher. Uses a laptop daily for email, a healthcare portal, and video calls with family.</td></tr>
+      <tr><td><b>Tech comfort</b></td><td>Low-moderate. Comfortable with Gmail. Struggles with anything that looks different from last time.</td></tr>
+      <tr><td><b>Key frustration</b></td><td>"Every time they update the website I have to call my daughter to find where things moved."</td></tr>
+      <tr><td><b>Where-How use case</b></td><td>Finding lab results after her healthcare portal redesigned its navigation.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:28px;">Secondary persona: Daniel, 34</h3>
+  <table>
+    <tbody>
+      <tr><td><b>Background</b></td><td>Marketing manager who just switched from HubSpot to a new CRM. High tech comfort in his usual tools.</td></tr>
+      <tr><td><b>Key frustration</b></td><td>"The onboarding video doesn't match what I'm actually seeing on screen."</td></tr>
+      <tr><td><b>Where-How use case</b></td><td>Finding where to set up automation rules in a CRM he's never used before.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="finding-list" style="margin-top:24px;">
+    <div class="finding"><span class="arrow">01</span><div><strong>The support content gap is structural.</strong> It's not a volume problem — users context-switch between reading instructions and executing them, a cognitive load that compounds on an already-unfamiliar interface.</div></div>
+    <div class="finding"><span class="arrow">02</span><div><strong>UI changes create repeat confusion.</strong> Where-How reads the live DOM, not pre-authored content, so it's always current even after a redesign.</div></div>
+    <div class="finding"><span class="arrow">03</span><div><strong>"Where" and "how" are the same question.</strong> Users rarely ask what a button does — they ask where it is and how to do a thing. Both resolve to a screen location plus a plain-language explanation.</div></div>
+    <div class="finding"><span class="arrow">04</span><div><strong>Visual guidance beats text for spatial tasks.</strong> Pointing at something is faster and more accurate than describing it.</div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <span class="section-label">The Concept</span>
+  <h2>One question. One circle. No hunting.</h2>
+  <p>The core interaction is deliberately minimal. The user opens the extension, types a plain-language question, and a red circle appears on the exact element they need — on the actual live page, not a screenshot or diagram. A short tooltip explains what the element does and what to do next.</p>
+  <p>Where-How works on any site with no integration required. It reads the live DOM, identifies interactive elements, and uses an LLM to match the user's query to the right one. If it's not confident in the match, it says so — a wrong pointer is worse than no pointer.</p>
+
+  <blockquote>Where-How points, the user clicks. No automation in v1. Trust has to be earned before the tool takes action on someone's behalf — especially for elderly users on sensitive sites like healthcare portals.<cite>Design principle</cite></blockquote>
+
+  <div class="img-placeholder">Demo recording — Where-How on Google Docs and Gmail<br>assets/images/where-how/demo.mp4</div>
+  <p><strong>What the demo shows:</strong> asking Where-How to find the link-insert button in Google Docs — it correctly highlights the toolbar icon. Then, asking it to locate the trash folder in Gmail after the sidebar is collapsed behind "more labels" — it correctly finds it once expanded, and the highlight box tracks the element as the sidebar scrolls.</p>
+  <p><strong>What's worth noticing:</strong> when asked about recovering a deleted email — a multi-step task, not a single element — it didn't fabricate an answer. It said there wasn't a single button for that. That refusal is a deliberate design choice: a wrong pointer is worse than no pointer.</p>
+
+  <div class="img-placeholder">Early interaction sketches — query input, visual pointer, low-confidence fallback<br>assets/images/where-how/sketches.png</div>
+</section>
+
+<section class="wrap">
+  <span class="section-label">Feature Requirements</span>
+  <h2>What v1 needs to do — and what it doesn't</h2>
+  <table>
+    <thead><tr><th>Priority</th><th>Feature</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><td>P0</td><td>Natural language input</td><td>User types a plain-language question. No special syntax required.</td></tr>
+      <tr><td>P0</td><td>Live DOM reader</td><td>Extension reads the current page's live DOM to identify interactive elements, labels, and structure.</td></tr>
+      <tr><td>P0</td><td>Element matching via LLM</td><td>Query and DOM representation sent to an LLM, which returns the best-matching element and a plain-language explanation.</td></tr>
+      <tr><td>P0</td><td>Visual pointer overlay</td><td>A red circle and directional arrow overlays the matched element. Non-destructive — disappears on dismiss.</td></tr>
+      <tr><td>P0</td><td>Plain-language tooltip</td><td>1–3 sentence explanation near the element: what it does and what to do next.</td></tr>
+      <tr><td>P1</td><td>Low-confidence fallback</td><td>If the extension isn't confident in its match, it says so instead of pointing to the wrong element.</td></tr>
+      <tr><td>P1</td><td>Multi-element disambiguation</td><td>If multiple elements could match, lists them with short descriptions and lets the user choose.</td></tr>
+      <tr><td>P1</td><td>Session-only privacy</td><td>No queries or DOM snapshots stored beyond the active session. No account required in v1.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="wrap">
+  <span class="section-label">Success Metrics</span>
+  <h2>How I'd know if this is working</h2>
+  <table>
+    <thead><tr><th>Metric</th><th>Definition</th><th>Target</th></tr></thead>
+    <tbody>
+      <tr><td>Task completion rate</td><td>% of test participants who complete a designated task using Where-How</td><td>≥ 80%</td></tr>
+      <tr><td>Pointer accuracy</td><td>% of queries where the extension highlights the correct element on first attempt</td><td>≥ 85%</td></tr>
+      <tr><td>Time to element</td><td>Time from query submission to clicking the correct element</td><td>&lt; 15s median</td></tr>
+      <tr><td>User confidence</td><td>Post-task: "I felt confident I was clicking the right thing" (1–5 scale)</td><td>≥ 4.0 / 5.0</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:16px; font-size:0.9rem;">Full PRD covers the complete problem statement, personas, feature requirements, user stories, success metrics, technical architecture, and open questions — including the ones without answers yet. <a href="#" style="color:var(--mid-blue); text-decoration:underline;">[Link to PRD — add file to assets/ and update this link]</a></p>
+</section>
+
+<section class="wrap">
+  <span class="section-label">Progress</span>
+  <h2>Where the project actually is, phase by phase</h2>
+
+  <div class="finding-list">
+    <div class="finding"><span class="arrow">1</span><div><strong>Phase 1 — Validate the concept.</strong> Still open: interviews with adults 65+ navigating real interfaces; a paper-prototype test of the "red circle on screen" metaphor. Deferred: voice input decision, waiting on user research, not blocking the build.</div></div>
+    <div class="finding"><span class="arrow">2</span><div><strong>Phase 2 — Technical prototype: can the core mechanism work?</strong> Yes, with real limits. Done: MV3 extension scaffolded (manifest, background service worker, content script, overlay CSS, options page); content script reads and structures the live DOM into a numbered list of clickable elements; DOM output wired to an LLM for element matching; tested on Google Docs and Gmail with correct highlights and correct "no such element" responses; fixed a bug where the highlight box went stale on scroll — it now re-tracks the element's position every animation frame. Not started: measuring match accuracy systematically across a larger set of sites and queries.</div></div>
+    <div class="finding"><span class="arrow">!</span><div><strong>Known limitations.</strong> Single-step only — it can point to one element, but can't yet guide a multi-step task. Free-tier LLM rate limits, with no retry logic yet. Capped at ~150 DOM elements per page for prompt-size reasons.</div></div>
+    <div class="finding"><span class="arrow">3</span><div><strong>Phase 3 — Usability testing.</strong> Recruit 5 participants from the primary persona group (adults 65+); run moderated sessions on 3 real-world tasks across 2 websites; measure against the success metrics above, then iterate.</div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <span class="section-label">Reflection</span>
+  <h2>What building first, then writing the PRD, taught me</h2>
+
+  <div class="finding-list">
+    <div class="finding"><span class="arrow">✓</span><div><strong>What I learned — building first told me what to scope.</strong> I found the real seam — single-target "where is X" questions work well, multi-step "how do I recover this" questions don't — by hitting it during testing, not by predicting it on paper. That limitation is now in the PRD as a stated non-goal for v1, not a surprise.</div></div>
+    <div class="finding"><span class="arrow">?</span><div><strong>What I'm uncertain about — whether the accuracy bar is achievable at scale.</strong> The LLM correctly identified real elements and correctly declined when nothing matched, on the pages I tested. 85% pointer accuracy is still the target, but I've only stress-tested a handful of sites and queries, not enough to know if that number holds.</div></div>
+    <div class="finding"><span class="arrow">◆</span><div><strong>PM lens — open questions are part of the deliverable.</strong> I listed 5 open questions in the PRD that I don't have answers to yet. A PM who pretends everything is resolved before research is done is just making things up. The questions are honest work.</div></div>
+    <div class="finding"><span class="arrow">→</span><div><strong>What this project is for me.</strong> Nobody assigned this to me. I noticed a gap, articulated why it matters, defined what solving it would require, and wrote the spec — evidence I generate product ideas independently.</div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="cta-band">
+    <h2>Next case study</h2>
+    <p>Explore the full case study index.</p>
+    <a href="index.html" class="btn btn-primary">See all case studies →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="press-line">I pressed the button. Obviously.</div>
+    <div class="footer-links">
+      <a href="https://github.com/Veroniki5208" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/veronique-gunawan/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:veronique.gunawan@gmail.com">Contact</a>
+    </div>
+    <div class="updated">Last updated August 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>
