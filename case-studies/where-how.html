@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics (GA4)  -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GP480TKW8N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GP480TKW8N');
+</script>
 <title>Where-How — Veronique Gunawan</title>
 <meta name="description" content="A browser extension that reads your screen and points to exactly what you need — built prototype-first, PRD written after.">
 <link rel="stylesheet" href="../assets/css/style.css">
@@ -28,6 +36,11 @@
   </div>
   <h1 style="margin-top:14px;">Where-How: show me where to click</h1>
   <p class="lede">A browser extension that reads your screen and places a visual pointer directly on the element you need — designed for elderly users and anyone dropped into an unfamiliar interface without a map.</p>
+  <div class="scan-bar">
+    <div class="scan-bar__item"><span class="scan-bar__label">Problem</span><p>Support content lives outside the interface — users have to read instructions, then hunt for what they describe on their actual screen.</p></div>
+    <div class="scan-bar__item"><span class="scan-bar__label">Approach</span><p>Built a working prototype first — a live DOM reader + LLM matching loop — then wrote the PRD from what the build actually taught me.</p></div>
+    <div class="scan-bar__item impact"><span class="scan-bar__label">Impact</span><p>Core loop works end-to-end on real sites (Google Docs, Gmail); PRD and usability testing still in progress.</p></div>
+  </div>
 
   <div class="meta-grid">
     <div><div class="label">My Role</div><div class="value">Product designer &amp; builder — sketches, PRD, and the extension itself</div></div>

@@ -102,6 +102,11 @@ section { padding: 20px 0; }
   font-weight: 600;
   font-size: 1.05rem;
   color: var(--navy);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .nav-name { font-size: 0.92rem; }
 }
 
 .nav-links {
@@ -357,6 +362,49 @@ section { padding: 20px 0; }
 }
 
 /* ============================================
+   Quick-scan summary bar (Problem / Approach / Impact)
+   ============================================ */
+
+.scan-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 28px 0;
+}
+
+.scan-bar__item {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.scan-bar__item:last-child { border-bottom: none; }
+
+.scan-bar__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--mid-blue);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.scan-bar__item p { margin: 0; color: var(--ink); font-size: 0.95rem; }
+
+.scan-bar__item.impact { background: var(--sky); }
+.scan-bar__item.impact p { color: var(--navy); font-weight: 500; }
+
+@media (min-width: 800px) {
+  .scan-bar { grid-template-columns: 1fr 1fr 1fr; }
+  .scan-bar__item { border-bottom: none; border-right: 1px solid var(--border); }
+  .scan-bar__item:last-child { border-right: none; }
+}
+
+/* ============================================
    Meta grid (role / timeline / methods / tools)
    ============================================ */
 
@@ -489,6 +537,27 @@ th {
 }
 
 .finding .arrow { color: var(--mid-blue); font-family: var(--font-mono); }
+
+/* ============================================
+   Sticky note callout
+   ============================================ */
+
+.sticky-note {
+  background: var(--sand);
+  border: 1px solid #E4D4BF;
+  border-radius: 4px;
+  padding: 14px 18px;
+  max-width: 260px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--navy);
+  transform: rotate(-2deg);
+  box-shadow: 0 4px 10px rgba(30,58,95,0.08);
+  margin: 20px auto;
+}
+
+.sticky-note.right { float: right; margin-left: 20px; transform: rotate(2deg); }
+.sticky-note.left { float: left; margin-right: 20px; }
 
 /* ============================================
    Placeholder image box (until real assets added)
@@ -644,5 +713,11 @@ footer .updated {
 @media (max-width: 640px) {
   .process-steps { grid-template-columns: 1fr 1fr; }
   .nav-links { gap: 14px; font-size: 0.85rem; }
-  section { padding: 48px 0; }
+  section { padding: 40px 0; }
+  .wrap, .wrap-wide { padding-left: 20px; padding-right: 20px; }
+  .hero h1 { font-size: 2.1rem; }
+}
+
+@media (min-width: 641px) and (max-width: 1000px) {
+  .wrap, .wrap-wide { padding-left: 48px; padding-right: 48px; }
 }
