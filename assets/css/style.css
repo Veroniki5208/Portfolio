@@ -332,6 +332,33 @@ section { padding: 20px 0; }
 .process-step p { font-size: 0.88rem; margin: 0; }
 
 /* ============================================
+   Principles
+   ============================================ */
+
+.principle-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.principle-card {
+  background: var(--sky);
+  border-left: 3px solid var(--mid-blue);
+  padding: 18px 16px;
+}
+
+.principle-card h3 {
+  color: var(--navy);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.principle-card p {
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+/* ============================================
    Stat row
    ============================================ */
 
@@ -704,6 +731,7 @@ footer .updated {
 @media (min-width: 700px) {
   .card-grid { grid-template-columns: 1fr 1fr; }
   .about-hero { grid-template-columns: 280px 1fr; }
+  .principle-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (min-width: 900px) {
