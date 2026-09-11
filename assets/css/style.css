@@ -620,6 +620,19 @@ th {
 
 .about-photo img { border-radius: var(--radius); }
 
+.about-hero h1 { max-width: none; }
+
+.about-hero__lede {
+  font-size: 1.1rem;
+  max-width: 52ch;
+  margin-top: 16px;
+}
+
+.about-hero__status {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
 /* ============================================
    In-progress card
    ============================================ */
