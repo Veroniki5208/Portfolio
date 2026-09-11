@@ -31,8 +31,7 @@
 
 <header class="wrap about-hero">
   <div class="about-photo">
-    <!-- Replace with your headshot: assets/images/shared/headshot.jpg -->
-    <div class="img-placeholder" style="min-height:340px;">your headshot goes here<br>assets/images/shared/headshot.jpg</div>
+    <img src="assets/images/headshot.jpg" alt="Veronique Gunawan">
   </div>
   <div>
     <h1>Hi, I’m Veronique.</h1>
@@ -46,6 +45,11 @@
   <p>When I was seven, I found a web game with one instruction: “Don’t Press It.”</p>
   <p>Naturally, I pressed it. Again and again.</p>
   <p>Every response surprised me. It was a small interaction, but it showed me that design can shape what people notice, feel, and choose to do. That curiosity has stuck with me ever since: how can a digital product invite exploration, reduce uncertainty, or help someone feel more confident?</p>
+  <div class="origin-interaction">
+    <button id="origin-press-button" class="origin-press-button" type="button"><span>DON'T PRESS</span></button>
+    <p class="origin-interaction__message" aria-live="polite"></p>
+    <p class="origin-interaction__log" aria-live="polite"></p>
+  </div>
 </section>
 
 <section class="wrap">
@@ -83,5 +87,6 @@
   </div>
 </footer>
 
+<script src="assets/js/script.js"></script>
 </body>
 </html>

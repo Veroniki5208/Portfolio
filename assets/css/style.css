@@ -234,6 +234,43 @@ section { padding: 20px 0; }
 
 .press-button:hover { background: #EEDFC9; }
 
+.origin-interaction {
+  margin-top: 24px;
+}
+
+.origin-press-button {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background: #C94A4A;
+  border: 1px solid #A83A3A;
+  color: var(--white);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.origin-press-button:hover {
+  background: #B83F3F;
+  transform: translateY(1px);
+}
+
+.origin-press-button:active { transform: translateY(2px); }
+
+.origin-interaction__message,
+.origin-interaction__log {
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  margin: 10px 0 0;
+  text-align: center;
+}
+
+.origin-interaction__log { color: var(--mid-blue); }
+
 /* ============================================
    Cards — case study grid
    ============================================ */
