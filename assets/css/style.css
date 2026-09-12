@@ -318,6 +318,8 @@ section { padding: 20px 0; }
   border-bottom: none;
 }
 
+.case-card__image--fandubs { background: var(--white); }
+
 .case-card__body { padding: 28px; }
 
 .case-card h3 { margin-bottom: 8px; font-size: 1.3rem; }
