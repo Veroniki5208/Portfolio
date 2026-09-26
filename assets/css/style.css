@@ -818,6 +818,7 @@ footer .updated {
   .card-grid { grid-template-columns: 1fr 1fr; }
   .about-hero { grid-template-columns: 280px 1fr; }
   .principle-grid { grid-template-columns: repeat(3, 1fr); }
+  .library-meta-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (min-width: 900px) {
