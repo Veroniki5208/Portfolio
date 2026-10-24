@@ -679,6 +679,42 @@ th {
   padding: 12px;
 }
 
+.image-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 16px 0;
+}
+
+.image-gallery__item {
+  margin: 0;
+}
+
+.image-gallery__item figcaption {
+  color: var(--navy);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.image-gallery__item img {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.image-gallery__stack {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 800px) {
+  .image-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* ============================================
    About page
    ============================================ */
