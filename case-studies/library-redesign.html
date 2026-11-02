@@ -40,8 +40,8 @@
 
   <div class="scan-bar">
     <div class="scan-bar__item"><span class="scan-bar__label">Problem</span><p>Valuable library data was organized as a muddled, disconnected list — clear to no single audience, useful to none.</p></div>
-    <div class="scan-bar__item"><span class="scan-bar__label">Approach</span><p>Combined a sponsor interview, a 9-point heuristic evaluation, competitor analysis, and a 12-response survey to find what was actually breaking, then rebuilt the information hierarchy around it.</p></div>
-    <div class="scan-bar__item impact"><span class="scan-bar__label">Outcome / Status</span><p>Full redesigned Figma mockup delivered across 9 major page sections, reviewed by the sponsor across two rounds. A follow-up survey testing the redesign is planned this week.</p></div>
+    <div class="scan-bar__item"><span class="scan-bar__label">Approach</span><p>Combined a sponsor interview, a 9-point heuristic evaluation, competitor analysis, and a 12-response survey to find what was actually breaking, then rebuilt the information hierarchy around it. I also ran a 22-response before/after validation survey of the redesign.</p></div>
+    <div class="scan-bar__item impact"><span class="scan-bar__label">Outcome / Status</span><p>Full redesigned Figma mockup delivered across 9 major page sections, reviewed by the sponsor across two rounds. In a before/after survey (n = 22, mostly UW students), 81.8% (18 of 22) said the redesign better shows what UW Libraries do for students and campus. This is directional, not representative.</p></div>
   </div>
 
   <div class="meta-grid library-meta-grid">
@@ -50,7 +50,7 @@
     <div><div class="label">Timeline</div><div class="value">9 weeks, UW HCDE Design for Passion</div></div>
     <div><div class="label">Stakeholder</div><div class="value">UW Libraries Data & Assessment Team — sponsor contact Maggie Faber</div></div>
     <div><div class="label">Deliverable</div><div class="value">Figma mockup of the redesigned Quick Facts & Data page</div></div>
-    <div><div class="label">Methods</div><div class="value">Stakeholder interview, heuristic evaluation, competitor analysis, user survey, stakeholder feedback</div></div>
+    <div><div class="label">Methods</div><div class="value">Stakeholder interview, heuristic evaluation, competitor analysis, user survey, validation survey, stakeholder feedback</div></div>
   </div>
 
 </header>
@@ -65,11 +65,15 @@
   <div class="image-gallery full-page-gallery">
     <figure class="image-gallery__item image-single">
       <figcaption>Before</figcaption>
-      <img src="../assets/images/library-redesign/before-full-page.png" alt="Existing UW Libraries Quick Facts and Data page before the redesign">
+      <div class="image-scroll">
+        <img src="../assets/images/library-redesign/before-full-page.png" alt="Existing UW Libraries Quick Facts and Data page before the redesign">
+      </div>
     </figure>
     <figure class="image-gallery__item image-single">
       <figcaption>After</figcaption>
-      <img src="../assets/images/library-redesign/after-full-page.png" alt="Redesigned UW Libraries Quick Facts and Data page">
+      <div class="image-scroll">
+        <img src="../assets/images/library-redesign/after-full-page.png" alt="Redesigned UW Libraries Quick Facts and Data page">
+      </div>
     </figure>
   </div>
 </section>
@@ -178,7 +182,7 @@
   <p style="font-size:0.85rem; color:var(--ink-soft);">(This framing is mine for the case study, not a direct quote from the sponsor brief.)</p>
 
   <h3 style="margin-top:24px;">Proposed success criteria</h3>
-  <p style="font-size:0.85rem; color:var(--ink-soft);">Not measured — these are what the redesign targets, pending future validation with real visitors.</p>
+  <p style="font-size:0.85rem; color:var(--ink-soft);">The first criterion now has partial support from the survey: a visitor can quickly understand what the page is about. The other three criteria were not measured by it.</p>
   <div class="finding-list">
     <div class="finding"><span class="arrow">→</span><div>A visitor can quickly understand what the page is about</div></div>
     <div class="finding"><span class="arrow">→</span><div>Major areas of impact are identifiable at a glance</div></div>
@@ -386,6 +390,50 @@
   </div>
 </section>
 
+<!-- VALIDATION -->
+<section class="wrap">
+  <span class="section-label">Validation</span>
+  <h2>Did the redesign land? 18 of 22 preferred it</h2>
+  <p>This follow-up to the earlier 12-response survey had 22 respondents, 19 of them UW students. Respondents saw the redesign first, answered what they thought its purpose was and how clear that purpose was, then saw the original before comparing the two; they finished with open-ended questions about what they learned and any other comments.</p>
+  <p>The comparison was direct, but the presentation order was fixed for every respondent: the original was first and the redesign was second.</p>
+
+  <div class="stat-row">
+    <div class="stat-block" style="grid-column:1 / -1;" role="img" aria-label="81.8 percent, 18 of 22 respondents preferred the redesign in a direct comparison. 3 preferred the original and 1 said about the same.">
+      <div class="num">81.8%</div>
+      <div class="label"><strong>18 of 22 preferred the redesign</strong> in a direct comparison</div>
+      <div style="margin-top:14px; color:var(--ink-soft); font-size:0.88rem;">Original: 3 (13.6%) &nbsp;|&nbsp; About the same: 1 (4.5%)</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:28px;">Clarity of the redesign's purpose</h3>
+  <p>This question was asked about the redesign only, before respondents saw the original. The scale was 1 to 5; 18 of 22 (81.8%) rated it 4 or 5.</p>
+  <div class="finding-list" role="list" aria-label="Clarity ratings for the redesign only">
+    <div class="finding" role="listitem"><span style="width:32px; flex:0 0 32px;">1</span><div style="flex:1;"><div style="height:28px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="Clarity rating 1: 0 respondents, 0 percent"><div style="width:0%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">0 respondents (0%)</div></div></div>
+    <div class="finding" role="listitem"><span style="width:32px; flex:0 0 32px;">2</span><div style="flex:1;"><div style="height:28px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="Clarity rating 2: 1 respondent, 4.5 percent"><div style="width:4.5%; min-width:4.5%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">1 respondent (4.5%)</div></div></div>
+    <div class="finding" role="listitem"><span style="width:32px; flex:0 0 32px;">3</span><div style="flex:1;"><div style="height:28px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="Clarity rating 3: 3 respondents, 13.6 percent"><div style="width:13.6%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">3 respondents (13.6%)</div></div></div>
+    <div class="finding" role="listitem"><span style="width:32px; flex:0 0 32px;">4</span><div style="flex:1;"><div style="height:28px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="Clarity rating 4: 14 respondents, 63.6 percent"><div style="width:63.6%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">14 respondents (63.6%)</div></div></div>
+    <div class="finding" role="listitem"><span style="width:32px; flex:0 0 32px;">5</span><div style="flex:1;"><div style="height:28px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="Clarity rating 5: 4 respondents, 18.2 percent"><div style="width:18.2%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">4 respondents (18.2%)</div></div></div>
+  </div>
+
+  <h3 style="margin-top:28px;">What respondents thought the page was for</h3>
+  <p>These purpose responses were collected after viewing the redesign and before seeing the original. The two most-selected purposes, impact on the community and statistics, are the ones the page was designed around.</p>
+  <div class="finding-list" role="list" aria-label="Respondents' selected purposes for the redesign">
+    <div class="finding" role="listitem"><div style="flex:1;"><div>Libraries' impact on the community</div><div style="height:28px; margin-top:6px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="Libraries' impact on the community: 17 respondents, 77.3 percent"><div style="width:77.3%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">17 respondents (77.3%)</div></div></div>
+    <div class="finding" role="listitem"><div style="flex:1;"><div>Libraries' statistics</div><div style="height:28px; margin-top:6px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="Libraries' statistics: 15 respondents, 68.2 percent"><div style="width:68.2%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">15 respondents (68.2%)</div></div></div>
+    <div class="finding" role="listitem"><div style="flex:1;"><div>Supporting the library (e.g., donating)</div><div style="height:28px; margin-top:6px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="Supporting the library, for example donating: 11 respondents, 50 percent"><div style="width:50%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">11 respondents (50%)</div></div></div>
+    <div class="finding" role="listitem"><div style="flex:1;"><div>Discovering library resources</div><div style="height:28px; margin-top:6px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="Discovering library resources: 10 respondents, 45.5 percent"><div style="width:45.5%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">10 respondents (45.5%)</div></div></div>
+    <div class="finding" role="listitem"><div style="flex:1;"><div>Not sure</div><div style="height:28px; margin-top:6px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="Not sure: 1 respondent, 4.5 percent"><div style="width:4.5%; min-width:4.5%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">1 respondent (4.5%)</div></div></div>
+    <div class="finding" role="listitem"><div style="flex:1;"><div>Marketing the school</div><div style="height:28px; margin-top:6px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="Marketing the school: 1 respondent, 4.5 percent"><div style="width:4.5%; min-width:4.5%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">1 respondent (4.5%)</div></div></div>
+    <div class="finding" role="listitem"><div style="flex:1;"><div>"It looks like an ad"</div><div style="height:28px; margin-top:6px; background:var(--sky); border:1px solid var(--border);" role="img" aria-label="It looks like an ad: 1 respondent, 4.5 percent"><div style="width:4.5%; min-width:4.5%; height:100%; background:var(--mid-blue);"></div></div><div style="font-size:0.82rem; color:var(--ink-soft); margin-top:4px;">1 respondent (4.5%)</div></div></div>
+  </div>
+
+  <div class="finding-list" style="margin-top:28px;">
+    <div class="finding"><span class="arrow">→</span><div><strong>What this does and doesn't show.</strong> <strong>Shows:</strong> most respondents preferred the redesign in a direct comparison; most rated its purpose clear; most identified the intended purposes. Purpose and clarity were collected before respondents saw the original, so those answers were not influenced by a comparison. <strong>Does not show:</strong> that the redesign is clearer than the original, because clarity was only asked about the redesign; results from the page's external audience (donors, university stakeholders), since 19 of 22 respondents were current UW students; or mobile readability.</div></div>
+    <div class="finding"><span class="arrow">→</span><div>The order was not randomized. Respondents had already studied the redesign before the comparison, and it was always the second option, so familiarity or recency may have favored it. n = 22 is small, so results are directional.</div></div>
+    <div class="finding"><span class="arrow">→</span><div>Three respondents gave outlier answers ("it looks like an ad," "not sure," and "marketing the school"). This is a small signal worth watching, not a finding.</div></div>
+  </div>
+</section>
+
 <!-- OUTCOME / STATUS -->
 <section class="wrap">
   <span class="section-label">Outcome / Status</span>
@@ -396,10 +444,10 @@
     <tbody>
       <tr><td>Completed</td><td>Full redesigned Figma mockup across 9 major sections, delivered as the project's final showcase</td></tr>
       <tr><td>Research-backed</td><td>Every major design decision traces to a heuristic finding, a competitor pattern, or a survey response — not personal preference alone</td></tr>
-      <tr><td>Validated post-redesign</td><td>Not yet — the 12-response survey identified problems in the <em>original</em> page. A follow-up survey testing the final redesign is planned for this week.</td></tr>
+      <tr><td>Validated post-redesign</td><td>Partial validation: in a survey of n = 22, 81.8% (18 of 22) preferred the redesign in a direct comparison. Results are directional, with a fixed presentation order.</td></tr>
       <tr><td>Stakeholder response</td><td>Reviewed and gave feedback at two separate stages — after initial wireframes and after consolidation into one direction — plus staff input on design and IT feasibility. Final sign-off on the completed hi-fi wasn't explicitly documented.</td></tr>
       <tr><td>Proposed impact</td><td>A clearer, more scannable page that keeps every department's data visible while reading as one coherent story rather than a disconnected list</td></tr>
-      <tr><td>Still unknown</td><td>Whether the redesign actually improves comprehension for the page's real external audience — the upcoming survey is the next validation step</td></tr>
+      <tr><td>Still unknown</td><td>Whether the redesign improves comprehension for the page's real external audience</td></tr>
     </tbody>
   </table>
 </section>
@@ -412,7 +460,7 @@
   <div class="finding-list">
     <div class="finding"><span class="arrow">✓</span><div><strong>What I learned about research.</strong> Even a small, quick 12-response survey caught a real, specific failure — that people genuinely couldn't tell what the page was for. Lightweight research still surfaces meaningful problems, even with limited access to the actual target audience within our timeline.</div></div>
     <div class="finding"><span class="arrow">✓</span><div><strong>What I learned about stakeholder collaboration.</strong> Maggie's framing ("information here and there," needing to serve multiple departments) was the right instinct, but turning that into an actionable design problem required a separate, independent heuristic evaluation. A stakeholder can correctly sense that something's wrong without being able to specify exactly what or why — that gap is the designer's job to close. Her sharing our work with her staff also surfaced a constraint we couldn't have found ourselves: what IT could actually build.</div></div>
-    <div class="finding"><span class="arrow">↻</span><div><strong>What I'd do differently.</strong> Working across different time zones as a 3-person team, combined with limited access to the page's actual external audience, constrained how deep the primary research could go. We're running a follow-up survey against the final redesign this week — in hindsight, building that validation step into the timeline earlier, rather than as a late addition, would have been the stronger plan.</div></div>
+    <div class="finding"><span class="arrow">↻</span><div><strong>What I'd do differently.</strong> Working across different time zones as a 3-person team, combined with limited access to the page's actual external audience, constrained how deep the primary research could go. I ran a follow-up survey against the final redesign, but building that validation step into the timeline earlier, rather than as a late addition, would have been the stronger plan. I would ask the clarity question about both the original and the redesign so a true before/after comparison on clarity would be possible. I would also randomize the order of the two pages in the comparison question.</div></div>
     <div class="finding"><span class="arrow">◆</span><div><strong>On using AI in this project.</strong> AI tools were used for parts of this process and, worth being honest about: they hallucinated at points and needed to be triple-checked, and using them well required real expertise across multiple tools rather than being a shortcut. What they did do well was remove manual busywork and speed up decision-making — useful for ideation, not a substitute for actual design judgment.</div></div>
   </div>
 </section>
@@ -433,7 +481,7 @@
       <a href="https://www.linkedin.com/in/veronique-gunawan/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:veronique.gunawan@gmail.com">Contact</a>
     </div>
-    <div class="updated">Last updated September 2026</div>
+    <div class="updated">Last updated November 2026</div>
   </div>
 </footer>
 
